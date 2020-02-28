@@ -49,3 +49,12 @@ test ('update names of people', () => {
     var num3 = "Kay";
     expect(syntax.people(array, num3)).toEqual(["Kay","Teddy","Cathy","Bobby"]);
 });
+
+//for loop test
+var sum = 0
+test ('for loop to read numbers less than 5', () => {
+    for (var i = 1; i <= 50; i++) {
+        sum = sum + i;
+      }  
+      //alert ("sum = " + sum);
+});

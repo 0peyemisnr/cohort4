@@ -89,13 +89,12 @@ ifTime: (time) => {
     // block of code to be executed if the condition is false
 },
 //arrays | add to the front
-//array.unshift(item1, item2, ..., itemX)
 addtoArray: (array, num1) => {
 array.unshift(num1);//.value
 return array;
 },
 
-// //arrays | add to the end
+//arrays | add to the end
 add2Array: (array, num) => {
     array.push(num);
     return array;
@@ -105,7 +104,14 @@ people: (array, num3) => {
     array.unshift(num3);
     return array;
 },
-//loops
+//loops | for loop
+for (input1,input2,input3) {
+    text += "The number is " + i + "<br>";
+  }
+
+//   for (i = 0; i < 5; i++) {
+//     text += "The number is " + i + "<br>";
+//   }
 
 };
 export default syntax;
