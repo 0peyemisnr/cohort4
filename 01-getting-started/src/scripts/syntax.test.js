@@ -53,8 +53,6 @@ test ('update names of people', () => {
 //for loop test
 var sum = 0
 test ('for loop to read numbers less than 5', () => {
-    for (var i = 1; i <= 50; i++) {
-        sum = sum + i;
-      }  
-      //alert ("sum = " + sum);
+        expect(syntax.forLoop(5)).toBe(15);
+        expect(syntax.forLoop(10)).toBe(55);
 });

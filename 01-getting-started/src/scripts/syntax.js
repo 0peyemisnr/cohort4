@@ -105,13 +105,14 @@ people: (array, num3) => {
     return array;
 },
 //loops | for loop
-for (input1,input2,input3) {
-    text += "The number is " + i + "<br>";
+ forLoop:(num2) => {
+ var sum=0;
+for (var i = 0; i <= num2; i++) {
+    sum = sum + i;
   }
-
-//   for (i = 0; i < 5; i++) {
-//     text += "The number is " + i + "<br>";
-//   }
+//   //loops | for-in loops
+return sum;
+ }
 
 };
 export default syntax;
