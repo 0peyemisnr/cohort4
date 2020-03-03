@@ -31,22 +31,16 @@ repeat
     lookup key to retrieve value
 */
 
-/*function saveUser(user, callback) {
-    $.post('/users', {
-      first: user.firstname,
-      last: user.lastname
-    }, callback);
-  }
-*/
 //number
 const syntax = {
-    isnum: (num) => {
+    isNum: (num) => {
         return true;
     },
 
     check: (num) => {
         if (num = 1) return number;
     },
+
 //String
     isString: (str) => {
         return str;
@@ -105,14 +99,31 @@ people: (array, num3) => {
     return array;
 },
 //loops | for loop
- forLoop:(num2) => {
- var sum=0;
-for (var i = 0; i <= num2; i++) {
-    sum = sum + i;
-  }
-//   //loops | for-in loops
-return sum;
- }
+//  forLoop:(num2) => {
+//  var sum=0;
+// for (var i = 0; i <= num2; i++) {
+//     sum = sum + i;
+//   };
 
+//  },
+
+//loops | for-in loops
+checkNames:(person) => {
+    let person = {firstname:"John", lastname:"Doe", age:"25"};
+     return person;
+     let text = "";
+     let x;
+     for (x in person) {
+     text += person[x] + " "; 
 };
+},
+//while loop
+function myFunction() {
+    let text = "";
+    let i = 0;
+    while (i < 5) {
+      text += "<br>The number is " + i;
+      i++;
+    };
+
 export default syntax;

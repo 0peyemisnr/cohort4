@@ -1,7 +1,7 @@
 import syntax from './syntax.js'
 //Number
 test('Does that isnum function work?', () => {
-    expect(syntax.isnum(1)).toBe(true);
+    expect(syntax.isNum(1)).toBe(true);
 });
 //String
 test('Does that isString function work?', () => {
@@ -51,8 +51,20 @@ test ('update names of people', () => {
 });
 
 //for loop test
-var sum = 0
-test ('for loop to read numbers less than 5', () => {
-        expect(syntax.forLoop(5)).toBe(15);
-        expect(syntax.forLoop(10)).toBe(55);
+// var sum = 0
+// test ('for loop to read numbers less than 5', () => {
+//        expect(syntax.forLoop(5)).toBe(15);
+//        expect(syntax.forLoop(10)).toBe(55);
+// });
+
+//for-in loops
+test ('for-in loop to read names', () => {
+    let person = [fname, lname, age];
+    expect(syntax.person(person)).toBe("John","Doe","25");
+});
+
+//while loop test
+test ('while loop test to check number less than 5', () => {
+    let myFunction = [1 < 5];
+    expect(syntax.myFunction(function)).toBe("1","2","3","4");
 });
