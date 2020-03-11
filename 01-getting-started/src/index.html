@@ -110,29 +110,49 @@
     </div>
 
     <!--- Code for Basic Calculator-->
+    <!-- <div class="bgimg-2 w3-display-container w3-opacity-min">
+        <div class="w3-display-middle">
+            <span class="w3-xxlarge w3-text-white w3-wide">MY CALCULATOR</span>
+        </div>
+    </div> -->
+
+    <div class="w3-content w3-container w3-padding-64 w3-center" id="calculator">
+        <form id="calculator" class="calculate">
+            <h2>My calculator</h2>
+            Alpha:<input type="text" id="num1" placeholder="enter a number...">
+            <br>
+            Beta:<input type="text" id="num2" placeholder="enter a number...">
+            <br>
             <div>
-            <br><input type="text" id="display" name="display" readonly><br/>
-            <input class="button digits" type="button" id = "7" value="7">
-            <onclick="calculator.display.value += '7'>
-            <input class="button digits" type="button" id = "8" value="8" onclick="calculator.display.value += '8'">
-            <input class="button digits" type="button" id = "9" value="9" onclick="calculator.display.value += '9'">
-            <input class="button mathButtons" type="button" value="+" onclick="calculator.display.value += ' + '">
-            <br>
-            <input class="button digits" type="button" id = "4" value="4" onclick="calculator.display.value += '4'">
-            <input class="button digits" type="button" id = "5" value="5" onclick="calculator.display.value += '5'">
-            <input class="button digits" type="button" id = "6" value="6" onclick="calculator.display.value += '6'">
-            <input class="button mathButtons" type="button" value="-" onclick="calculator.display.value += ' - '">
-            <br>
-            <input class="button digits" type="button" id = "1" value="1" onclick="calculator.display.value += '1'">
-            <input class="button digits" type="button" id = "2" value="2" onclick="calculator.display.value += '2'">
-            <input class="button digits" type="button" id = "3" value="3" onclick="calculator.display.value += '3'">
-            <input class="button mathButtons" type="button" value="x" onclick="calculator.display.value += ' * '">
-            <br>
-            <input id="clearButton" class="button" type="button" value="C" onclick="calculator.display.value = ''">
-            <input class="button digits" type="button" value="0" onclick="calculator.display.value += '0'">
-            <input class="button mathButtons" type="button" value="=" onclick="calculator.display.value = eval(calculator.display.value)">
-            <input class="button mathButtons" type="button" value="/" onclick="calculator.display.value += ' / '">
+                Operation:
+                <label class="container">+
+                    <input id="add-checkbox" name="checkmark" class="operation-checkmark" type="radio" value="+"
+                        checked>
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">-
+                    <input id="substract-checkbox" name="checkmark" class="operation-checkmark" type="radio" value="-">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">*
+                    <input id="multiply-checkbox" name="checkmark" class="operation-checkmark" type="radio" value="*">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">/
+                    <input id="divide-checkbox" name="checkmark" class="operation-checkmark" type="radio" value="/">
+                    <span class="checkmark"></span>
+                </label>
             </div>
+            <br>
+            <button id="calculate" class="calculate-button">Clear</button>
+            <div>
+                <strong>
+                    <label id="result">Result =</label>
+                    <input id="answer" type="text" placeholder="answer..." disabled>
+                </strong>
+            </div>
+        </form>
+    </div>
     <!-- Footer -->
     <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
         <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
@@ -149,7 +169,7 @@
 
 
     <script type="module" src="./scripts/main.js"></script>
-
+</div>
     <script>
         // Change style of navbar on scroll
         window.onscroll = function() {
