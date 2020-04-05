@@ -84,7 +84,6 @@ const performOperation = (clickobj) => {
 for (let i = 0; i < checkmark.length; i++) {
     checkmark[i].addEventListener('input', performOperation, false);
 }
-
 // clear calculator button
 if (button) {
     button.addEventListener('click', function () {
@@ -94,5 +93,45 @@ if (button) {
         num2 = '';
         document.getElementById('answer').value = '';
         window.location.href = '#calculator';
+    });
+}
+// netincome input eventlistener
+let incomeInput = document.getElementById('income');
+if (incomeInput) {
+    incomeInput.addEventListener('input', updateIncome);
+    function updateIncome(event) {
+        let netIncome = Number(event.target.value);
+        document.getElementById('federal-tax-answer').value = '$ ' + taxCalcFunctions.fedTaxRates(netIncome).toFixed(2);
+    }
+}
+for (let i = 0; i < arrayButtons.length; i++) {
+    arrayButtons[i].addEventListener('click', arrayOperation, false);
+}
+const provinceDictionary = {
+    AB: 'Alberta',
+    BC: 'British Columbia',
+    MB: 'Manitoba',
+    SK: 'Saskatchewan',
+    NS: 'Nova Scotia',
+    NB: 'New Brunswick',
+    NL: 'Newfoundland and Labrador',
+    PE: 'Prince Edward Island',
+    ON: 'Ontario',
+    QC: 'Quebec',
+    NT: 'Northwest Territories',
+    YT: 'Yukon',
+    NU: 'Nunavut'
+};
+// Working with dictionaries
+const lookupProvinceInput = document.getElementById('lookup-province-input');
+const lookupProvinceButton = document.getElementById('lookup-province-button');
+const lookupProvinceAnswer = document.getElementById('lookup-province-answer');
+
+if (lookupProvinceButton) {
+    lookupProvinceButton.addEventListener('click', function () {
+        console.log('clickedddd');
+        
+        lookupProvinceAnswer.value = arraysFunctions.provinceLookup(lookupProvinceInput.value, provinceDictionary);
+        console.log(arraysFunctions.provinceLookup(lookupProvinceInput.value));
     });
 }
